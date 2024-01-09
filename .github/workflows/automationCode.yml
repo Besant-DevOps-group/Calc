@@ -1,0 +1,13 @@
+name: Automation code
+on: push
+
+jobs:
+  my-jobs:
+    name: Automation Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install python
+        run: sudo apt-get install python3
+      - name: Run Test file
+        run: python3 Sakthivel_Test.py
