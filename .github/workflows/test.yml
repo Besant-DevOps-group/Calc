@@ -3,7 +3,7 @@ name: Test Pipeline
 on: push
 
 jobs:
-    my-jobs:
+    Test:
         name: Test Job
         runs-on: ubuntu-latest
         steps:
