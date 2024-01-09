@@ -1,6 +1,6 @@
 name: Hello World
 
-on: push
+on: pull_request
 
 jobs:
     my-jobs:
@@ -11,4 +11,4 @@ jobs:
               run: echo "Hello World"
             - name: Print Name
               run: echo "Vignesh"
-    
+     
