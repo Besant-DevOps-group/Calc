@@ -7,6 +7,7 @@ jobs:
         name: Test Job
         runs-on: ubuntu-latest
         steps:
+            - uses: actions/checkout@v4
             - name: List folders
               run: ls -a
             - name: Install Python
