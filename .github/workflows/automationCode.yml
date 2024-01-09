@@ -11,5 +11,7 @@ jobs:
         run: sudo apt-get install python3
       - name: Install selenium
         run: pip install selenium
+      - name: pip install Chrome Driver
+        run: pip install chromedriver-autoinstaller
       - name: Run Test file
         run: python3 Sakthivel_Test.py
