@@ -11,8 +11,8 @@ jobs:
         run: sudo apt-get install python3
       - name: Install selenium
         run: pip install selenium
-      - name: pip install Chrome Driver
-        run: pip install chromedriver-autoinstaller
+      # - name: pip install Chrome Driver
+      #   run: pip install chromedriver-autoinstaller
       - name: chromedriver install
         run: chmod +x drivers/chromedriver.exe
       - name: Run Test file

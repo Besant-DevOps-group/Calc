@@ -3,8 +3,10 @@ import chromedriver_autoinstaller
 from selenium.webdriver.chrome.service import Service
 
 
-executable_path = "drivers/chromedriver.exe"
-driver = webdriver.Chrome(service=Service(executable_path))
+
+driver = webdriver.Chrome()
+# executable_path = "drivers/chromedriver.exe"
+# driver = webdriver.Chrome(service=Service(executable_path))
 # executable_path = chromedriver_autoinstaller.install()
 # driver = webdriver.Chrome(service=Service(executable_path))
 # driver =webdriver.Firefox()
