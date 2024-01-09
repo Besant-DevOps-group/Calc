@@ -6,9 +6,9 @@ from selenium import webdriver
 
 options = webdriver.ChromeOptions()
 options.add_argument('--headless')
-capabilities = {'pageLoadStrategy': 'normal', 'pageLoadTimeout': 60000}  # Set timeout in milliseconds
+# capabilities = {'pageLoadStrategy': 'normal', 'pageLoadTimeout': 60000}  # Set timeout in milliseconds
 executable_path = "drivers/chromedriver.exe"
-driver = webdriver.Chrome(service=Service("drivers/chromedriver.exe"), options=options, service_args=['--verbose', '--log-path=/path/to/chromedriver.log'])
+driver = webdriver.Chrome(service=Service("drivers/chromedriver.exe"), options=options)
 
 
 # driver = webdriver.Chrome()
