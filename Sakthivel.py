@@ -1,5 +1,5 @@
 from selenium import webdriver
-import chromedriver_autoinstaller
+# import chromedriver_autoinstaller
 from selenium.webdriver.chrome.service import Service
 
 
