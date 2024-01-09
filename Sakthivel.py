@@ -1,23 +1,24 @@
 from selenium import webdriver
-# import chromedriver_autoinstaller
+import chromedriver_autoinstaller
 from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
 
-from selenium import webdriver
+# Chrome Browser
+#----------------------------
+chrome_options = webdriver.ChromeOptions()
+chrome_options.add_argument('--headless')
+executable_path = chromedriver_autoinstaller.install()
+driver = webdriver.Chrome(service=Service(executable_path),options=chrome_options)
 
-options = webdriver.ChromeOptions()
-options.add_argument('--headless')
-# capabilities = {'pageLoadStrategy': 'normal', 'pageLoadTimeout': 60000}  # Set timeout in milliseconds
-executable_path = "drivers/chromedriver.exe"
-driver = webdriver.Chrome(service=Service("drivers/chromedriver.exe"), options=options)
+# Firefox Browser
+#---------------------------------
+# firefox_options = webdriver.FirefoxOptions()
+# firefox_options.add_argument("--headless")
+# driver = webdriver.Firefox(options=firefox_options)
 
-
-# driver = webdriver.Chrome()
-# executable_path = "drivers/chromedriver.exe"
-# driver = webdriver.Chrome(service=Service(executable_path))
-# executable_path = chromedriver_autoinstaller.install()
-# driver = webdriver.Chrome(service=Service(executable_path))
-# driver =webdriver.Firefox()
+# Maximize browser
 driver.maximize_window()
 
+# Redirect the link
 driver.get("https://github.com/")
 print("Successfully redirected")
