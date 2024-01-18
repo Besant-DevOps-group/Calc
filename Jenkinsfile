@@ -4,13 +4,13 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sudo apt-get install python3
+                sh 'sudo apt-get install python3'
             }
         }
         
         stage('Test') {
             steps {
-                python3 ./main_test.py
+                sh 'python3 ./main_test.py'
             }
         }
         
