@@ -4,7 +4,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'echo root | sudo -S apt-get install python3'
+                withPython(version: '3.8.5') {
+                    sh 'python --version'
+                }
             }
         }
         
