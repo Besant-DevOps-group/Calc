@@ -4,9 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                withPython(version: '3.8.5') {
-                    sh 'python --version'
-                }
+                sh 'python3 --version'
             }
         }
         
