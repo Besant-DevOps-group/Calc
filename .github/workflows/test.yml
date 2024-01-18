@@ -1,0 +1,16 @@
+name: Test Pipeline
+
+on: push
+
+jobs:
+    Test:
+        name: Test Job
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - name: List folders
+              run: ls -a
+            - name: Install Python
+              run: sudo apt-get install python3
+            - name: Run Test
+              run: python3 main_test.py
