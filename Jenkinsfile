@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'sudo apt-get install python3'
+                sh 'echo nila | sudo -S apt-get install python3'
             }
         }
         
